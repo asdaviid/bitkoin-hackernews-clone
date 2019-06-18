@@ -63,7 +63,8 @@ body {
 
         &-item {
             display: inline;
-            padding: .25rem;
+            padding-right: .25rem;
+            padding-left: .25rem;
 
             &:not(:last-child) {
                 border-right: 1px solid black;
@@ -122,11 +123,12 @@ body {
 
     &__list {
         list-style: none;
-        font-size: 1.15rem;
+        font-size: 1.05rem;
 
         &-item {
             display: inline;
-            padding: .25rem;
+            padding-right: .25rem;
+            padding-left: .25rem;
 
             &:not(:last-child) {
                 border-right: 1px solid black;

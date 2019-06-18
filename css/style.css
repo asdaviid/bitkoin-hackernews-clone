@@ -45,7 +45,8 @@ body {
     margin-left: -2rem; }
     .header__list-item {
       display: inline;
-      padding: .25rem; }
+      padding-right: .25rem;
+      padding-left: .25rem; }
       .header__list-item:not(:last-child) {
         border-right: 1px solid black;
         margin-right: 5px; }
@@ -86,10 +87,11 @@ body {
   padding: 1.5rem; }
   .footer__list {
     list-style: none;
-    font-size: 1.15rem; }
+    font-size: 1.05rem; }
     .footer__list-item {
       display: inline;
-      padding: .25rem; }
+      padding-right: .25rem;
+      padding-left: .25rem; }
       .footer__list-item:not(:last-child) {
         border-right: 1px solid black;
         margin-right: 5px; }
