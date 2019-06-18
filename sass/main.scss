@@ -14,4 +14,19 @@ $color-secondary-grey: #9a9a9a;
 
 html {
     font-size: 62.5%; // 1rem => 10px
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 84%;
+    background-color: $color-secondary-smoke;
+    min-height: 100vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
