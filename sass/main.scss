@@ -2,6 +2,7 @@ $color-primary: #f60;
 $color-black: #000;
 $color-secondary-smoke: #f6f6ef;
 $color-secondary-grey: #9a9a9a;
+$color-secondary-grey-2: #a9a9a9;
 
 // base reset
 *,
@@ -21,12 +22,59 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
     width: 84%;
     background-color: $color-secondary-smoke;
-    min-height: 100vh;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.footer {
+    border-top: 2px solid orangered;
+    font-size: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.5rem;
+
+    &__list {
+        list-style: none;
+        font-size: 1.15rem;
+
+        &-item {
+            display: inline;
+            padding: .25rem;
+
+            &:not(:last-child) {
+                border-right: 1px solid black;
+                margin-right: 5px;
+            }
+
+            &-link {
+                text-decoration: none;
+                color: $color-black;
+            }
+        }
+    }
+
+    &-search {
+        margin-top: 1.5rem;
+
+        &__label {
+            color: $color-secondary-grey;
+            font-size: 1.3rem;
+        }
+
+        &__input {
+            border: 1px solid $color-secondary-grey-2;
+            width: 13rem;
+        }
+    }
 }

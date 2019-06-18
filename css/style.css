@@ -12,11 +12,40 @@ html {
 body {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
 .container {
   width: 84%;
   background-color: #f6f6ef;
-  min-height: 100vh;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+
+.footer {
+  border-top: 2px solid orangered;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem; }
+  .footer__list {
+    list-style: none;
+    font-size: 1.15rem; }
+    .footer__list-item {
+      display: inline;
+      padding: .25rem; }
+      .footer__list-item:not(:last-child) {
+        border-right: 1px solid black;
+        margin-right: 5px; }
+      .footer__list-item-link {
+        text-decoration: none;
+        color: #000; }
+  .footer-search {
+    margin-top: 1.5rem; }
+    .footer-search__label {
+      color: #9a9a9a;
+      font-size: 1.3rem; }
+    .footer-search__input {
+      border: 1px solid #a9a9a9;
+      width: 13rem; }
