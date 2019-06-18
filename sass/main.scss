@@ -1,0 +1,17 @@
+$color-primary: #f60;
+$color-black: #000;
+$color-secondary-smoke: #f6f6ef;
+$color-secondary-grey: #9a9a9a;
+
+// base reset
+*,
+*::after,
+*::before {
+    border: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem => 10px
+}
