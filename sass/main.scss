@@ -45,6 +45,7 @@ body {
     background-color: $color-primary;
     display: flex;
     height: 2.5rem;
+    margin-bottom: 1rem;
 
     flex-direction: row;
     align-items: center;
@@ -84,6 +85,28 @@ body {
     text-decoration: none;
     text-transform: lowercase;
     font-size: 1.15rem;
+}
+
+.hn__news-item {
+    display: flex;
+    font-size: 1.25rem;
+    padding-bottom: .75rem;
+    margin-left: 1rem;
+
+    &-index, &-uparrow {
+        margin-right: 5px;
+        color: $color-secondary-grey;
+    }
+
+    &-source, &-sub {
+        color: $color-secondary-grey;
+        font-size: 1.1rem;
+    }
+
+    &-sub--link:hover, &-source:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
 
 .footer {

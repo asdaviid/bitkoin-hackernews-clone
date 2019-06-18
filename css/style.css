@@ -32,6 +32,7 @@ body {
   background-color: #f60;
   display: flex;
   height: 2.5rem;
+  margin-bottom: 1rem;
   flex-direction: row;
   align-items: center; }
   .header__text {
@@ -59,6 +60,21 @@ body {
   text-decoration: none;
   text-transform: lowercase;
   font-size: 1.15rem; }
+
+.hn__news-item {
+  display: flex;
+  font-size: 1.25rem;
+  padding-bottom: .75rem;
+  margin-left: 1rem; }
+  .hn__news-item-index, .hn__news-item-uparrow {
+    margin-right: 5px;
+    color: #9a9a9a; }
+  .hn__news-item-source, .hn__news-item-sub {
+    color: #9a9a9a;
+    font-size: 1.1rem; }
+  .hn__news-item-sub--link:hover, .hn__news-item-source:hover {
+    cursor: pointer;
+    text-decoration: underline; }
 
 .footer {
   border-top: 2px solid orangered;
