@@ -1,0 +1,17 @@
+{
+  hn {
+    topStories(limit: 30) {
+      id
+      timeISO
+      url
+      score
+      title
+      by {
+        id
+      }
+      kids {
+        type
+      }
+    }
+  }
+}
