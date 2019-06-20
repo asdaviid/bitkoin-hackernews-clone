@@ -4,6 +4,21 @@ $color-secondary-smoke: #f6f6ef;
 $color-secondary-grey: #9a9a9a;
 $color-secondary-grey-2: #a9a9a9;
 
+// mixins
+@mixin respond($breakpoint) {
+    @if $breakpoint == medium-tablet {
+        @media (max-width: 568px) {
+            @content
+        };
+    }
+
+    @if $breakpoint == tablet {
+        @media (max-width: 750px) {
+            @content
+        };
+    }
+}
+
 // base reset
 *,
 *::after,
@@ -31,6 +46,11 @@ body {
     background-color: $color-secondary-smoke;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    @include respond(tablet) {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 .img-logo {
@@ -47,8 +67,25 @@ body {
     height: 2.5rem;
     margin-bottom: 1rem;
 
+    @include respond(tablet) {
+        height: 4.5rem;
+    }
+
     flex-direction: row;
     align-items: center;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: .5rem;
+        }
+    }
 
     &__text {
         font-size: 1.35rem;
@@ -60,6 +97,11 @@ body {
         list-style: none;
         font-size: 1.15rem;
         margin-left: -2rem;
+
+        @include respond(tablet) {
+            margin-left: 0; 
+            padding-left: 0;
+        }
 
         &-item {
             display: inline;
@@ -124,6 +166,8 @@ body {
     &__list {
         list-style: none;
         font-size: 1.05rem;
+        padding: 0;
+        text-align: center;
 
         &-item {
             display: inline;
@@ -142,17 +186,49 @@ body {
         }
     }
 
+    &-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+    }
+
     &-search {
         margin-top: 1.5rem;
+        display: flex;
+        width: 100%;
+        
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(medium-tablet) {
+            flex-direction: column;
+            align-items: center !important;
+        }
+
+        @include respond(tablet) {
+            align-items: flex-start;
+        }
 
         &__label {
             color: $color-secondary-grey;
             font-size: 1.3rem;
+            margin-right: 5px;
         }
 
         &__input {
             border: 1px solid $color-secondary-grey-2;
             width: 13rem;
+
+            @include respond(medium-tablet) {
+                width: 100%;
+            }
+
+            @include respond(tablet) {
+                flex: 1;
+            }
         }
     }
 }
