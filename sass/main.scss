@@ -130,6 +130,14 @@ body {
     font-size: 1.15rem;
 }
 
+.more-link {
+    margin-left: 4rem;
+    margin-bottom: 15rem;
+    color: $color-black;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
 .hn__news-item {
     display: flex;
     font-size: 1.25rem;
@@ -155,7 +163,7 @@ body {
 .footer {
     border-top: 2px solid orangered;
     font-size: 1.4rem;
-
+    margin-top: .7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
