@@ -39,6 +39,9 @@ body {
   margin-bottom: 1rem;
   flex-direction: row;
   align-items: center; }
+  @media (max-width: 374px) {
+    .header {
+      height: 5.5rem !important; } }
   @media (max-width: 750px) {
     .header {
       height: 4.5rem; } }

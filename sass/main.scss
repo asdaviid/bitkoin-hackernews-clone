@@ -6,6 +6,12 @@ $color-secondary-grey-2: #a9a9a9;
 
 // mixins
 @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 374px) {
+            @content
+        };
+    }
+
     @if $breakpoint == medium-tablet {
         @media (max-width: 568px) {
             @content
@@ -66,6 +72,10 @@ body {
     display: flex;
     height: 2.5rem;
     margin-bottom: 1rem;
+
+    @include respond(phone) {
+        height: 5.5rem !important;
+    }
 
     @include respond(tablet) {
         height: 4.5rem;
