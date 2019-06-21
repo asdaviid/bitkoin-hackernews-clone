@@ -1,35 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 
-const Newslist = (props) => {
-    return (
-        <main className="content">
-            <div className="hn__news-item">
-                <div className="hn__news-item-index">1.</div>
-                <div className="hn__news-item-uparrow">
-                    <i className="fa fa-caret-up"></i>
-                </div>
-                <div className="hn__news-item-details">
-                    <div className="hn__news-item-title">LinkedIn Exfiltrates Data from the Browser <span className="hn__news-item-source">(prophitt.me)</span></div>
-                    <div className="hn__news-item-sub">
-                        170 points by <span className="hn__news-item-sub--link">assassinator</span> <span className="hn__news-item-sub--link">50 minutes ago</span> | <span className="hn__news-item-sub--link">hide</span> | <span className="hn__news-item-sub--link">29 comments</span></div>
-                </div>
-            </div>
-            <div className="hn__news-item">
-                <div className="hn__news-item-index">22.</div>
-                <div className="hn__news-item-uparrow">
-                    <i className="fa fa-caret-up"></i>
-                </div>
-                <div className="hn__news-item-details">
-                    <div className="hn__news-item-title">LinkedIn Exfiltrates Data from the Browser <span className="hn__news-item-source">(prophitt.me)</span></div>
-                    <div className="hn__news-item-sub">
-                        170 points by <span className="hn__news-item-sub--link">assassinator</span> <span className="hn__news-item-sub--link">50 minutes ago</span> | <span className="hn__news-item-sub--link">hide</span> | <span className="hn__news-item-sub--link">29 comments</span>
-                    </div>
-                </div>
-            </div>
+import News from './news';
 
-            <a className="more-link" href="#">More</a>
-        </main>
-    )
+const NEWS_QUERY = gql`
+    query NewsQuery($limit: Int) {
+        hn {
+            topStories(limit: $limit) {
+                id
+                timeISO
+                url
+                score
+                title
+                by {
+                    id
+                }
+                kids {
+                    type
+                }
+            }
+        }
+    }
+`
+
+class Newslist extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    _getNewsItemsToRender(data) {
+        return data.hn.topStories;
+    }
+
+    render() {
+        return (
+            <main className="content">
+                <Query query={NEWS_QUERY} variables={{limit: 30}}>
+                    {({ loading, error, data, subscribeToMore}) => {
+                        if (loading) return <div>fetching</div>
+                        if (error) return <div>error</div>
+
+                        return (
+                            <div>
+                                {this._getNewsItemsToRender(data).map((item, index) => <News key={index + 1} index={index + 1} item={item} />)}
+
+                                <a key={31} className="more-link" href="#">More</a>
+                            </div>
+                        )
+                    }}
+                </Query>
+            </main>
+        );
+    }
 }
 
 export default Newslist;

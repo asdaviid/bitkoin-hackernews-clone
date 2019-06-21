@@ -3,7 +3,7 @@ import React from 'react';
 const Header = (props) => {
     return (
         <header className="header">
-            <img src="img/y18-logo.gif" class="img-logo" />
+            <img src="img/y18-logo.gif" className="img-logo" />
 
             <div className="header__content">
                 <div className="header__text">
@@ -12,30 +12,30 @@ const Header = (props) => {
 
                 <ul className="header__list">
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">new</a>
+                        <a href="#" className="header__list-item-link">new</a>
                     </li>
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">past</a>
+                        <a href="#" className="header__list-item-link">past</a>
                     </li>
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">comments</a>
+                        <a href="#" className="header__list-item-link">comments</a>
                     </li>
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">ask</a>
+                        <a href="#" className="header__list-item-link">ask</a>
                     </li>
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">show</a>
+                        <a href="#" className="header__list-item-link">show</a>
                     </li>
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">jobs</a>
+                        <a href="#" className="header__list-item-link">jobs</a>
                     </li>
                     <li className="header__list-item">
-                        <a href="#" class="header__list-item-link">submit</a>
+                        <a href="#" className="header__list-item-link">submit</a>
                     </li>
                 </ul>
             </div>
 
-            <a class="login__button" href="#">Login</a>
+            <a className="login__button" href="#">Login</a>
         </header>
     );
 }

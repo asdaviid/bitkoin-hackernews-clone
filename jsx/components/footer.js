@@ -40,7 +40,7 @@ const Footer = () => {
 
             <div className="footer-items">
                 <div className="footer-search">
-                    <label for="search" className="footer-search__label">Search:</label>
+                    <label htmlFor="search" className="footer-search__label">Search:</label>
                     <input className="footer-search__input" type="text" />
                 </div>
             </div>
