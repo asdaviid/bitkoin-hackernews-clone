@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import Header from './components/header';
 import Footer from './components/footer';
 import Newslist from './components/newslist';
 
-const App = () => {
-    return (
-        <div>
-            <Header />
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Header />
 
-            <Newslist />
+                <Newslist />
 
-            <Footer />
-        </div>
-    );
+                <Footer />
+            </div>
+        );
+    }
 }
 
 ReactDOM.render(
