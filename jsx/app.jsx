@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Header from './components/header';
+import Footer from './components/footer';
+import Newslist from './components/newslist';
+
 const App = () => {
-    return 'hello world';
+    return (
+        <div>
+            <Header />
+
+            <Newslist />
+
+            <Footer />
+        </div>
+    );
 }
 
 ReactDOM.render(
