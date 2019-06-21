@@ -35,16 +35,10 @@ body {
 .header {
   background-color: #f60;
   display: flex;
-  height: 2.5rem;
+  padding: .5rem 0;
   margin-bottom: 1rem;
   flex-direction: row;
   align-items: center; }
-  @media (max-width: 374px) {
-    .header {
-      height: 5.5rem !important; } }
-  @media (max-width: 750px) {
-    .header {
-      height: 4.5rem; } }
   .header__content {
     display: flex;
     align-items: center;
@@ -58,6 +52,9 @@ body {
   .header__text {
     font-size: 1.35rem;
     font-weight: 700; }
+    @media (max-width: 750px) {
+      .header__text {
+        margin-left: .5rem; } }
   .header__list {
     flex: 1;
     list-style: none;
@@ -68,12 +65,11 @@ body {
         margin-left: 0;
         padding-left: 0; } }
     .header__list-item {
-      display: inline;
-      padding-right: .25rem;
-      padding-left: .25rem; }
+      display: inline-block;
+      padding-right: .5rem;
+      margin-left: .5rem; }
       .header__list-item:not(:last-child) {
-        border-right: 1px solid black;
-        margin-right: 5px; }
+        border-right: 1px solid black; }
       .header__list-item-link {
         text-decoration: none;
         text-transform: lowercase;
@@ -81,13 +77,14 @@ body {
 
 .login__button {
   margin-right: 5px;
+  margin-left: 2rem;
   color: #000;
   text-decoration: none;
   text-transform: lowercase;
   font-size: 1.15rem; }
 
 .more-link {
-  margin-left: 4rem;
+  margin-left: 5rem;
   margin-bottom: 15rem;
   color: #000;
   text-decoration: none;
@@ -97,7 +94,8 @@ body {
   display: flex;
   font-size: 1.25rem;
   padding-bottom: .75rem;
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  margin-right: 1rem; }
   .hn__news-item-index {
     width: 2.1rem;
     text-align: end; }
@@ -126,12 +124,11 @@ body {
     padding: 0;
     text-align: center; }
     .footer__list-item {
-      display: inline;
-      padding-right: .25rem;
-      padding-left: .25rem; }
+      display: inline-block;
+      padding-right: .5rem;
+      padding-left: .5rem; }
       .footer__list-item:not(:last-child) {
-        border-right: 1px solid black;
-        margin-right: 5px; }
+        border-right: 1px solid black; }
       .footer__list-item-link {
         text-decoration: none;
         color: #000; }
@@ -157,7 +154,8 @@ body {
     .footer-search__label {
       color: #9a9a9a;
       font-size: 1.3rem;
-      margin-right: 5px; }
+      margin-right: 5px;
+      margin-bottom: 5px; }
     .footer-search__input {
       border: 1px solid #a9a9a9;
       width: 13rem; }
