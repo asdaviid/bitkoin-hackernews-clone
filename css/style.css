@@ -39,6 +39,9 @@ body {
   margin-bottom: 1rem;
   flex-direction: row;
   align-items: center; }
+  @media (max-width: 404px) {
+    .header {
+      height: 5.5rem !important; } }
   @media (max-width: 750px) {
     .header {
       height: 4.5rem; } }
@@ -95,6 +98,9 @@ body {
   font-size: 1.25rem;
   padding-bottom: .75rem;
   margin-left: 1rem; }
+  .hn__news-item-index {
+    width: 2.1rem;
+    text-align: end; }
   .hn__news-item-index, .hn__news-item-uparrow {
     margin-right: 5px;
     color: #9a9a9a; }
