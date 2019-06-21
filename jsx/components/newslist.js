@@ -37,8 +37,8 @@ class Newslist extends Component {
         return (
             <main className="content">
                 <Query query={NEWS_QUERY} variables={{limit: 30}}>
-                    {({ loading, error, data, subscribeToMore}) => {
-                        if (loading) return <div>fetching</div>
+                    {({ loading, error, data }) => {
+                        if (loading) return <div className="fetching_notification">fetching latest news</div>
                         if (error) return <div>error</div>
 
                         return (
