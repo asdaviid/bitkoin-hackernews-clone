@@ -98,6 +98,9 @@ body {
   font-size: 1.25rem;
   padding-bottom: .75rem;
   margin-left: 1rem; }
+  .hn__news-item-index {
+    width: 2.1rem;
+    text-align: end; }
   .hn__news-item-index, .hn__news-item-uparrow {
     margin-right: 5px;
     color: #9a9a9a; }

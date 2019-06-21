@@ -153,6 +153,11 @@ body {
     font-size: 1.25rem;
     padding-bottom: .75rem;
     margin-left: 1rem;
+    
+    &-index {
+        width: 2.1rem;
+        text-align: end;
+    }
 
     &-index, &-uparrow {
         margin-right: 5px;
